@@ -1,0 +1,10 @@
+{
+  "rules": {
+    "risk_per_position_within_limit": true,
+    "total_open_risk_within_limit": true,
+    "position_count_within_limit": true,
+    "all_positions_have_stop_loss": true,
+    "no_stop_loss_breached": true,
+    "prices": { "BTCUSDT": 9123450, "ETHUSDT": 305000 }
+  }
+}

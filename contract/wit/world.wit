@@ -1,0 +1,33 @@
+// VaultSinyal contract world: the `tenant-base` world of the T3N testnet
+// (host:tenant@2.0.0 + host:interfaces@2.4.0). tenant-base only: no HTTP,
+// so a stored trading record can never leave the enclave through this
+// contract — the only way out is a boolean answer from `check`.
+//
+// The host packages under wit/deps/ are vendored from the Terminal 3
+// trinity release the public testnet runs (testnet-v1.0.12). They are NOT
+// committed here; see wit/deps/README.md for how to vendor them before
+// building.
+package z:signal-vault@0.1.0;
+
+world signal-vault {
+  import host:tenant/tenant-context@2.0.0;
+  import host:interfaces/logging@2.4.0;
+  import host:interfaces/kv-store@2.4.0;
+
+  export contracts;
+}
+
+interface contracts {
+  record generic-input {
+    input:        option<list<u8>>,
+    user-profile: option<list<u8>>,
+    context:      option<list<u8>>,
+  }
+
+  // The customer saves their own trading record. Refused on a delegated call.
+  store:  func(req: generic-input) -> result<list<u8>, string>;
+  // Yes/no risk answers about the calling customer's record. Never returns a value.
+  check:  func(req: generic-input) -> result<list<u8>, string>;
+  // The customer deletes their own record. Refused on a delegated call.
+  forget: func(req: generic-input) -> result<list<u8>, string>;
+}

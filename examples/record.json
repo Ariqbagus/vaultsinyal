@@ -1,0 +1,27 @@
+{
+  "positions": [
+    {
+      "asset": "BTCUSDT",
+      "side": "long",
+      "entry_price_cents": 9000000,
+      "size_cents": 500000,
+      "stop_loss_price_cents": 8550000,
+      "opened_on": "2026-11-20"
+    },
+    {
+      "asset": "ETHUSDT",
+      "side": "long",
+      "entry_price_cents": 310000,
+      "size_cents": 300000,
+      "stop_loss_price_cents": 294500,
+      "opened_on": "2026-11-22"
+    }
+  ],
+  "risk_policy": {
+    "max_risk_per_position_bps": 200,
+    "max_total_open_risk_bps": 500,
+    "max_positions": 5,
+    "account_equity_cents": 5000000,
+    "require_stop_loss": true
+  }
+}

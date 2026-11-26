@@ -1,0 +1,29 @@
+{
+  "name": "vaultsinyal",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "setup": "tsx src/setup.ts",
+    "store": "tsx src/store.ts",
+    "grant": "tsx src/grant.ts",
+    "agent": "tsx src/agent.ts",
+    "dashboard": "tsx src/dashboard.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "private": "true",
+  "dependencies": {
+    "@terminal3/t3n-sdk": "^5.42.0",
+    "tsx": "^4.23.15"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.10",
+    "typescript": "^7.0.2"
+  }
+}

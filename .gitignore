@@ -1,0 +1,7 @@
+# Secrets — never commit. The developer key and the agent key live only here.
+.env
+
+# Dependencies and build output
+node_modules/
+contract/target/
+*.wasm

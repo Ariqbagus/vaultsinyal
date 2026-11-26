@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-26T01:24:57.530Z",
+  "total_checks": 2,
+  "unique_customer_dids": 1,
+  "customers": [
+    {
+      "did": "did:t3n:c8fdcd699a9ee82d0b78ead8be318f6d5b11a546",
+      "checks": 2,
+      "last_check": "2026-11-26T01:24:53.025Z",
+      "breaches": 2
+    }
+  ],
+  "first_check": "2026-11-26T01:01:44.262Z",
+  "last_check": "2026-11-26T01:24:53.025Z"
+}
